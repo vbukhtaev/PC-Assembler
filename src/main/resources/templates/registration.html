@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>PC Assembler</title>
+</head>
+<body>
+<h1>Register</h1>
+
+<form method="POST" th:action="@{/register}" id="registerForm">
+    <label for="login">Login: </label>
+    <input type="text" name="login"/><br/>
+    <label for="password">Password: </label>
+    <input type="password" name="password"/><br/>
+    <label for="confirm">Confirm password: </label>
+    <input type="password" name="confirm"/><br/>
+    <label for="firstName">First name: </label>
+    <input type="text" name="firstName"/><br/>
+    <label for="lastName">Last name: </label>
+    <input type="text" name="lastName"/><br/>
+    <label for="patronymic">Patronymic: </label>
+    <input type="text" name="patronymic"/><br/>
+    <label for="email">Email: </label>
+    <input type="email" name="email"/><br/>
+    <input type="submit" value="Register"/>
+</form>
+</body>
+</html>

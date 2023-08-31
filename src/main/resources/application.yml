@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    generate-unique-name: false
+    name: pc-assembler
+    url: jdbc:postgresql://localhost:5432/pc_assembler
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+  sql:
+
+    init:
+      mode: always
+      schema-locations:
+        - classpath:schema.sql

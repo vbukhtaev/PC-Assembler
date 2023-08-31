@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <title>Создание производителя комплектующих</title>
+  <link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+<body>
+<img th:src="@{/images/motherboard.png}"/>
+
+<form method="POST" th:action="@{/manufacturers}" th:object="${newManufacturer}">
+
+  <label for="nameField">Название:</label>
+  <input type="text" th:field="*{name}" id="nameField">
+  <div style="color:brown" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+
+  <br/>
+
+  <input type="submit" value="Создать"/>
+
+</form>
+
+</body>
+</html>

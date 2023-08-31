@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <title>PC Assembler</title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
+</head>
+<body>
+<h1>All hardware manufacturers;</h1>
+<img th:src="@{/images/motherboard.png}"/>
+
+<form method="POST" th:object="${manufacturer}">
+
+    <div th:each = "manufacturer : ${allManufacturers}">
+        <a th:href="@{/manufacturer/{id}(id=${manufacturer.getId()})}">
+            <span style="white-space: nowrap;" th:text="${manufacturer.getName()}"></span>
+        </a>
+    </div>
+
+</form>
+</body>
